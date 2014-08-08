@@ -5,8 +5,7 @@ that makes it easier get GNU Radio and friends running on OS X.
 
 ## Installation
 
-These steps have been tested on Lion 10.7.4 with Xcode 4.3.2 and Mountain Lion
-10.8 with Xcode 4.4.1.
+These steps have been tested on Mavericks 10.9.4 with Xcode 5.1.1
 
 - Add this line to your profile (ie `~/.bash_profile` or `~/.zshenv`) and reload
   your shell (`exec $SHELL`)
@@ -18,15 +17,18 @@ These steps have been tested on Lion 10.7.4 with Xcode 4.3.2 and Mountain Lion
 - Install the python package prerequisites
 
   ```sh
-  brew install python gfortran umfpack swig
+  brew install python gcc swig
   ```
+- Install suite-sparse (formerly umfpack)
 
+  ```sh
+  brew tap homebrew/science
+  brew install suite-sparse
+  ```
 - Install the prerequisite python packages
 
   ```sh
-  pip install numpy Cheetah lxml
-  pip install https://github.com/scipy/scipy/tarball/v0.11.0rc2
-  export PKG_CONFIG_PATH="/usr/x11/lib/pkgconfig" pip install http://downloads.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.1.1/matplotlib-1.1.1.tar.gz
+  pip install numpy Cheetah lxml scipy matplotlib
   ```
 
 - Install gnuradio (add `--with-qt` for `gr-qtgui`)
