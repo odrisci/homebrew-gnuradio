@@ -9,7 +9,7 @@ class GrBaz < Formula
 
   def install
     mkdir 'build' do
-      system 'cmake', '..', *std_cmake_args
+      system 'cmake', '..', '-DPYTHON_LIBRARY=/usr/local/Frameworks/Python.framework/Versions/2.7/Python', *std_cmake_args
       system 'make'
       system 'make install'
     end
