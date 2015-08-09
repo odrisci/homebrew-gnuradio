@@ -5,7 +5,7 @@ that makes it easier get GNU Radio and friends running on OS X.
 
 ## Installation
 
-These steps have been tested on Mavericks 10.9.4 with Xcode 5.1.1
+These steps have been tested on Yosemite 10.10.4 with Xcode 6.4
 
 - Add this line to your profile (ie `~/.bash_profile` or `~/.zshenv`) and reload
   your shell (`exec $SHELL`)
@@ -34,7 +34,7 @@ These steps have been tested on Mavericks 10.9.4 with Xcode 5.1.1
 - Install gnuradio (add `--with-qt` for `gr-qtgui`)
 
   ```sh
-  brew tap titanous/homebrew-gnuradio
+  brew tap odrisci/homebrew-gnuradio
   brew install gnuradio
   ```
 - Create the `~/.gnuradio/config.conf` config file for custom block support
@@ -59,3 +59,4 @@ These steps have been tested on Mavericks 10.9.4 with Xcode 5.1.1
   ```sh
   brew install rtlsdr gr-osmosdr gr-baz --HEAD
   ```
+
